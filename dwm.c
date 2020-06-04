@@ -1753,7 +1753,7 @@ col(Monitor *m) {
             resize(c, x + m->wx, m->wy, w - (2 * c->bw), m->wh - (2 * c->bw), False);
             x += WIDTH(c);
         } else {
-            h = (m->mw - y) / (n - i);
+            h = (m->wh - y) / (n - i);
             resize(c, x + m->wx, m->wy + y, m->ww - x - (2 * c->bw), h - (2 * c->bw), False);
             y += HEIGHT(c);
         }
