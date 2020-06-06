@@ -12,10 +12,12 @@ static const char foreground[]      = "#f8f8f2";
 static const char grey[]            = "#44475a";
 static const char purple[]          = "#bd93f9";
 static const char blue[]            = "#6272a4";
+static const char red[]             = "#ff5555";
 static const char *colors[][3]      = {
 	/*               fg         bg           border   */
 	[SchemeNorm] = { foreground, background, grey },
-	[SchemeSel]  = { foreground, blue,       purple  },
+	[SchemeSel]  = { foreground, red,       red  },
+    [SchemeInfoSel] = {foreground, background, background}
 };
 
 /* tagging */
@@ -58,7 +60,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", blue, "-sf", foreground, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", red, "-sf", foreground, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
