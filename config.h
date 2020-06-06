@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -13,11 +13,12 @@ static const char grey[]            = "#44475a";
 static const char purple[]          = "#bd93f9";
 static const char blue[]            = "#6272a4";
 static const char red[]             = "#ff5555";
+static const char pink[]            = "#ff79c6";
 static const char *colors[][3]      = {
-	/*               fg         bg           border   */
-	[SchemeNorm] = { foreground, background, grey },
-	[SchemeSel]  = { foreground, red,       red  },
-    [SchemeInfoSel] = {foreground, background, background}
+	/*                  fg          bg          border   */
+	[SchemeNorm]    = { foreground, background, background },
+	[SchemeSel]     = { foreground, grey      , grey       },
+    [SchemeInfoSel] = { foreground, background, background }
 };
 
 /* tagging */
@@ -60,7 +61,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", red, "-sf", foreground, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", grey, "-sf", foreground, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
