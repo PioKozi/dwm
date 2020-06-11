@@ -11,13 +11,12 @@ static const char dmenufont[]       = "Jetbrains Mono Nerd Font:size=11";
 static const char background[]      = "#282828";
 static const char foreground[]      = "#ebdbb2";
 static const char grey[]            = "#928374";
-// static const char yellow[]          = "#d79921";
-static const char red[]          = "#cc241d";
+static const char yellow[]          = "#d79921";
 static const char *colors[][3]      = {
 	/*                  fg          bg          border   */
 	[SchemeNorm]    = { foreground, background, grey       },
-	[SchemeSel]     = { foreground, red,        red        },
-    [SchemeInfoSel] = { red,        background, background },
+	[SchemeSel]     = { foreground, yellow    , yellow     },
+    [SchemeInfoSel] = { yellow    , background, background },
 };
 
 /* tagging */
@@ -62,7 +61,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", red, "-sf", foreground, "-p", "run:", "-i", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", yellow, "-sf", foreground, "-p", "run:", "-i", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
