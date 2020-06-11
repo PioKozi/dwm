@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -11,11 +11,13 @@ static const char dmenufont[]       = "Jetbrains Mono Nerd Font:size=11";
 static const char background[]      = "#282828";
 static const char foreground[]      = "#ebdbb2";
 static const char grey[]            = "#928374";
+// static const char yellow[]          = "#d79921";
+static const char red[]          = "#cc241d";
 static const char *colors[][3]      = {
 	/*                  fg          bg          border   */
 	[SchemeNorm]    = { foreground, background, grey       },
-	[SchemeSel]     = { foreground, grey      , foreground },
-    [SchemeInfoSel] = { foreground, background, background }
+	[SchemeSel]     = { foreground, red,        red        },
+    [SchemeInfoSel] = { red,        background, background },
 };
 
 /* tagging */
@@ -27,7 +29,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
     /* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Gimp",    NULL,     NULL,           0,         0,          0,           0,        -1 }, // floating got annoying
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "kitty",   NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
@@ -60,7 +62,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", grey, "-sf", foreground, "-p", "run:", "-i", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", red, "-sf", foreground, "-p", "run:", "-i", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
