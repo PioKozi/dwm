@@ -15,7 +15,7 @@ static const char yellow[]          = "#d79921";
 static const char *colors[][3]      = {
 	/*                  fg          bg          border   */
 	[SchemeNorm]    = { foreground, background, grey       },
-	[SchemeSel]     = { foreground, yellow    , yellow     },
+	[SchemeSel]     = { background, yellow    , yellow     },
     [SchemeInfoSel] = { yellow    , background, background },
 };
 
@@ -61,7 +61,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", yellow, "-sf", foreground, "-p", "run:", "-i", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", background, "-nf", foreground, "-sb", yellow, "-sf", background, "-p", "run:", "-i", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
