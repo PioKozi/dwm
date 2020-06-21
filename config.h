@@ -13,10 +13,10 @@ static const char foreground[]      = "#ebdbb2";
 static const char grey[]            = "#928374";
 static const char yellow[]          = "#d79921";
 static const char *colors[][3]      = {
-	/*                  fg          bg          border   */
-	[SchemeNorm]    = { foreground, background, grey       },
-	[SchemeSel]     = { background, yellow    , yellow     },
-    [SchemeInfoSel] = { yellow    , background, background },
+	/*                  fg           bg           border   */
+	[SchemeNorm]    = { foreground , background , grey       },
+	[SchemeSel]     = { background , yellow     , yellow     },
+    [SchemeInfoSel] = { yellow     , background , background },
 };
 
 /* tagging */
