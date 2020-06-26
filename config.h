@@ -31,6 +31,7 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         0,          0,           0,        -1 }, // floating got annoying
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,           1,        -1 },
 	{ "kitty",   NULL,     NULL,           0,         0,          1,          -1,        -1 },
+	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
