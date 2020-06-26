@@ -8,15 +8,20 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Jetbrains Mono Nerd Font:size=11" };
 static const char dmenufont[]       = "Jetbrains Mono Nerd Font:size=11";
-static const char background[]      = "#282828";
+static const char background[]      = "#1d2021";
 static const char foreground[]      = "#ebdbb2";
+/* static const char red[]          = "#cc241d"; */
+static const char green[]           = "#98971a";
+/* static const char yellow[]       = "#d79921"; */
+/* static const char blue[]         = "#458588"; */
+/* static const char magenta[]      = "#b16286"; */
+/* static const char aqua[]         = "#689d6a"; */
 static const char grey[]            = "#928374";
-static const char yellow[]          = "#d79921";
 static const char *colors[][3]      = {
 	/*                  fg           bg           border   */
 	[SchemeNorm]    = { foreground , background , grey       },
-	[SchemeSel]     = { background , yellow     , yellow     },
-    [SchemeInfoSel] = { yellow     , background , background },
+	[SchemeSel]     = { background , green      , green      },
+    [SchemeInfoSel] = { green      , background , background },
 };
 
 /* tagging */
