@@ -10,8 +10,8 @@ static const char *fonts[]          = { "Jetbrains Mono Nerd Font:size=11" };
 static const char dmenufont[]       = "Jetbrains Mono Nerd Font:size=11";
 static const char background[]      = "#1d2021";
 static const char foreground[]      = "#ebdbb2";
-/* static const char red[]          = "#cc241d"; */
-static const char green[]           = "#98971a";
+static const char red[]             = "#cc241d";
+/* static const char green[]        = "#98971a"; */
 /* static const char yellow[]       = "#d79921"; */
 /* static const char blue[]         = "#458588"; */
 /* static const char magenta[]      = "#b16286"; */
@@ -20,8 +20,8 @@ static const char grey[]            = "#928374";
 static const char *colors[][3]      = {
 	/*                  fg           bg           border   */
 	[SchemeNorm]    = { foreground , background , grey       },
-	[SchemeSel]     = { background , green      , green      },
-    [SchemeInfoSel] = { green      , background , background },
+	[SchemeSel]     = { red        , background , red       },
+    [SchemeInfoSel] = { red        , background , background },
 };
 
 /* tagging */
